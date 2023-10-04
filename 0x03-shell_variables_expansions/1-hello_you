@@ -1,7 +1,2 @@
 #!/bin/bash
-
-# Get the current user's name using the `whoami` command
-user=$(whoami)
-
-# Print the greeting
-echo "hello $user"
+echo "hello $USER"
