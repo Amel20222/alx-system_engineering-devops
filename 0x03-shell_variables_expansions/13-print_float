@@ -1,2 +1,13 @@
 #!/bin/bash
-printf "%.2f\n" $NUM
+
+# Get the value of the NUM environment variable
+num=$NUM
+
+# Check if num is not empty and is a valid number
+if [ -n "$num" ] && [[ "$num" =~ ^[0-9]*(\.[0-9]*)?$ ]]; then
+    # Format num to two decimal places
+    formatted_num=$(printf "%.2f" "$num")
+    echo "$formatted_num"
+else
+    echo "Invalid number or NUM is not set."
+fi
